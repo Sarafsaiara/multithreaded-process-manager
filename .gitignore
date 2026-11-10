@@ -1,0 +1,7 @@
+# Ignore compiled binaries
+pm_sim
+*.out
+*.o
+
+# Ignore runtime-generated output files
+snapshots.txt
