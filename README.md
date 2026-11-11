@@ -1,10 +1,10 @@
-Multithreaded Process Manager:
+# Multithreaded Process Manager:
 
 
 SimulatorA C-based operating system project that simulates a process management subsystem using POSIX threads (pthreads) and synchronization primitives (mutexes and condition variables).This project models how an operating system's process table operates under concurrent workloads, tracking process states, parent-child relationships, and lifecycle management without executing actual OS processes.
 
 
-Features:
+## Features:
 
 
 Global Process Table:
@@ -36,7 +36,7 @@ Concurrent Worker Threads: Reads worker task scripts concurrently to simulate mu
 Real-Time Monitor Thread: Uses POSIX condition variables (pthread_cond_wait) to wait for state updates and automatically log snapshot tables to snapshots.txt without busy waiting.
 
 
-Architecture Overview
+## Architecture Overview
 
 
                |           Process Manager            |
@@ -52,7 +52,7 @@ Architecture Overview
      +---------------+                         +---------------+
 
 
-Getting Started:
+##Getting Started:
 Prerequisites:
 
 GCC Compiler (gcc)
@@ -61,7 +61,7 @@ GCC Compiler (gcc)
 POSIX Threads Library (pthreads ) 
 
 
-Compilation:
+##Compilation:
 To compile the project with POSIX threads enabled, run:
 
 
@@ -74,7 +74,7 @@ Execute the program by passing one or more worker script text files as command-l
 
 ./pm_sim thread0.txt thread1.txt
 
-Task Script Syntax:
+##Task Script Syntax:
 
 Each worker thread executes operations defined in a script file line-by-line:
 Command-Syntax -Description :
@@ -95,5 +95,5 @@ kill -kill <pid> -Terminates the specified process.
 sleep -sleep <ms> -Pauses the worker thread for the specified milliseconds. 
 
 
-Output Log: 
+##Output Log: 
 All state snapshots and system execution logs are automatically written to snapshots.txt upon process table updates.
